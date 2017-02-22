@@ -2,7 +2,7 @@
   "name": "frecl-vscode-codegen",
   "displayName": "Frecl VSCode Code Generator",
   "description": "Auto generates code for the frecl/react/redux ecosystem",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "bluechilli",
   "engines": {
     "vscode": "^1.5.0"
@@ -25,6 +25,7 @@
       "type": "git",
       "url": "https://github.com/BlueChilli/frecl-vscode-codegen.git"
     },
+    "homepage": "https://github.com/BlueChilli/frecl-vscode-codegen",
     "configuration": {
       "type": "object",
       "title": "FRECL Tools Configuration",
