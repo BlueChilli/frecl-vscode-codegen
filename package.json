@@ -1,0 +1,58 @@
+{
+  "name": "frecl-vscode-codegen",
+  "displayName": "Frecl VSCode Code Generator",
+  "description": "Auto generates code for the frecl/react/redux ecosystem",
+  "version": "0.0.6",
+  "publisher": "bluechilli",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:frecl.formGenerator"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "frecl.formGenerator",
+        "title": "frecl.FormGenerator"
+      }
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/BlueChilli/frecl-vscode-codegen.git"
+    },
+    "configuration": {
+      "type": "object",
+      "title": "FRECL Tools Configuration",
+      "properties": {
+        "frecl.swaggerURL": {
+          "type": "string",
+          "default": "",
+          "description": "Swagger API URL that the app uses to fetch the schema."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "mocha": "^2.3.3",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "@frecl/codegen": "git+https://github.com/BlueChilli/frecl-codegen.git#master",
+    "request": "^2.79.0"
+  }
+}
